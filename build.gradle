@@ -9,7 +9,8 @@ repositories {
 
 def allureVersion = "2.13.8",
     selenideVersion = "5.20.1",
-    junitVersion = "5.7.1"
+    junitVersion = "5.7.1",
+    choice = System.getProperty("tags")
 
 allure {
     version = allureVersion
@@ -45,10 +46,10 @@ tasks.withType(Test) {
 
 test {
     useJUnitPlatform {
-        if (System.getProperty("tags","smoke")){
+        if (choice == "smoke"){
         includeTags "smoke"
         }
-        else if (System.getProperty("tags","regress")){
+        else if (choice == "regress"){
             includeTags "regress"
             }
     }
