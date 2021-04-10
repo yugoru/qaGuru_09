@@ -45,10 +45,10 @@ tasks.withType(Test) {
 
 test {
     useJUnitPlatform {
-        if (System.getProperty("smoke")){
+        if (System.getProperty("tags","smoke")){
         includeTags "smoke"
         excludeTags "regress"}
-        else if (System.getProperty("regress")){
+        else if (System.getProperty("tags","regress")){
             includeTags "regress"
             excludeTags "smoke"}
     }
