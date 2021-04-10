@@ -40,7 +40,7 @@ public class TextBoxTestsYugoru extends TestBase {
     File file = new File(filePath.toString());
 
     @Test
-    @DisplayName("StepTest")
+    @DisplayName("Это SMOKE")
     @Owner("yugoru")
     @Tag("smoke")
 
@@ -107,7 +107,7 @@ public class TextBoxTestsYugoru extends TestBase {
         });
     }
     @Test
-    @DisplayName("StepTest")
+    @DisplayName("ЭТО REGRESS")
     @Owner("yugoru")
     @Tag("regress")
     void successfulTest() {
