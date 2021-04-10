@@ -47,9 +47,9 @@ test {
     useJUnitPlatform {
         if (System.getProperty("tags","smoke")){
         includeTags "smoke"
-        excludeTags "regress"}
+        }
         else if (System.getProperty("tags","regress")){
             includeTags "regress"
-            excludeTags "smoke"}
+            }
     }
 }
