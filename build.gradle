@@ -52,5 +52,6 @@ test {
         else if (choice == "regress"){
             includeTags "regress"
             }
+        else includeTags "smoke", "regress"
     }
 }
